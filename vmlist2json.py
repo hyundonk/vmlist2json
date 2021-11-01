@@ -18,6 +18,7 @@ df = pd.read_csv(filename, dtype={
         "subnet" : str,
         "subnet_ip_offset" : str,
         "vm_offer" : str,
+        "os_disk_size" : str,
         "name" : str,
         "ipaddress" : str,
         "image_id" : str
@@ -37,6 +38,7 @@ for key, value in grouped:
   dictionary['subnet']            = j.at[0, 'subnet']
   dictionary['subnet_ip_offset']  = j.at[0, 'subnet_ip_offset']
   dictionary['vm_offer']          = j.at[0, 'vm_offer']
+  dictionary['os_disk_size']      = j.at[0, 'os_disk_size']
 
   dictList = []
   for i in j.index:
