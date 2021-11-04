@@ -4,6 +4,8 @@ import sys
 import pandas as pd
 from itertools import groupby 
 from collections import OrderedDict
+from ast import literal_eval
+
 import json    
 
 if len(sys.argv) != 2 :
@@ -19,6 +21,7 @@ df = pd.read_csv(filename, dtype={
         "subnet_ip_offset" : str,
         "vm_offer" : str,
         "os_disk_size" : str,
+        "dns_servers" : str,
         "name" : str,
         "ipaddress" : str,
         "image_id" : str
@@ -37,8 +40,9 @@ for key, value in grouped:
   dictionary['vm_size']           = j.at[0, 'vm_size']
   dictionary['subnet']            = j.at[0, 'subnet']
   dictionary['subnet_ip_offset']  = j.at[0, 'subnet_ip_offset']
-  dictionary['vm_offer']          = j.at[0, 'vm_offer']
   dictionary['os_disk_size']      = j.at[0, 'os_disk_size']
+  dictionary['dns_servers']       = literal_eval(j.at[0, 'dns_servers'])
+  dictionary['vm_offer']          = j.at[0, 'vm_offer']
 
   dictList = []
   for i in j.index:
