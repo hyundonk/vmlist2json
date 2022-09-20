@@ -1,2 +1,2 @@
-﻿servicename,name,vm_size,subnet,subnet_ip_offset,vm_offer,os_disk_size,dns_servers,ipaddress,image_path,image_id
-TEST,TEST01AZ,Standard_F4s_v2,frontend,20,WindowsServer,300,"""10.10.1.4"",""10.10.1.5""",10.10.0.51,/subscriptions/{mysubscriptionid}/resourceGroups/{resourcegroup}/providers/Microsoft.Compute/images/,/subscriptions/{mysubscriptionid}/resourceGroups/{resourcegroup}/providers/Microsoft.Compute/images/{imagename}
+﻿servicename,name,vm_size,subnet,subnet_ip_offset,vm_offer,os_disk_size,dns_servers,ipaddress,image_path,image_id,zone
+TEST,TEST01AZ,Standard_F4s_v2,frontend,20,WindowsServer,300,"""10.10.1.4"",""10.10.1.5""",10.10.0.51,/subscriptions/{mysubscriptionid}/resourceGroups/{resourcegroup}/providers/Microsoft.Compute/images/,/subscriptions/{mysubscriptionid}/resourceGroups/{resourcegroup}/providers/Microsoft.Compute/images/{imagename},1

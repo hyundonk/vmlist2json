@@ -24,7 +24,8 @@ df = pd.read_csv(filename, dtype={
         "dns_servers" : str,
         "name" : str,
         "ipaddress" : str,
-        "image_id" : str
+        "image_id" : str,
+        "zone" : str
     })
 
 results = []
@@ -50,6 +51,7 @@ for key, value in grouped:
     anotherDict['name']       = j.at[i, 'name']
     anotherDict['ipaddress']  = j.at[i, 'ipaddress']
     anotherDict['image_id']   = j.at[i, 'image_id']
+    anotherDict['zone']   = j.at[i, 'zone']
     dictList.append(anotherDict)
 
   print(dictList)  
